@@ -35,20 +35,20 @@ function CountdownTimer({ targetDate }: { targetDate: Date }) {
   return (
     <div className="flex items-center justify-center gap-6 md:gap-8">
       <div className="text-center">
-        <span className="text-3xl md:text-4xl font-light text-gray-700 tabular-nums">{timeLeft.days}</span>
-        <span className="text-sm text-gray-400 block">days</span>
+        <span className="text-3xl md:text-4xl font-bold text-red-600 tabular-nums">{timeLeft.days}</span>
+        <span className="text-sm text-gray-500 block">days</span>
       </div>
       <div className="text-center">
-        <span className="text-3xl md:text-4xl font-light text-gray-700 tabular-nums">{timeLeft.hours}</span>
-        <span className="text-sm text-gray-400 block">hours</span>
+        <span className="text-3xl md:text-4xl font-bold text-red-600 tabular-nums">{timeLeft.hours}</span>
+        <span className="text-sm text-gray-500 block">hours</span>
       </div>
       <div className="text-center">
-        <span className="text-3xl md:text-4xl font-light text-gray-700 tabular-nums">{timeLeft.minutes}</span>
-        <span className="text-sm text-gray-400 block">minutes</span>
+        <span className="text-3xl md:text-4xl font-bold text-red-600 tabular-nums">{timeLeft.minutes}</span>
+        <span className="text-sm text-gray-500 block">minutes</span>
       </div>
       <div className="text-center">
-        <span className="text-3xl md:text-4xl font-light text-gray-700 tabular-nums">{timeLeft.seconds}</span>
-        <span className="text-sm text-gray-400 block">seconds</span>
+        <span className="text-3xl md:text-4xl font-bold text-red-600 tabular-nums">{timeLeft.seconds}</span>
+        <span className="text-sm text-gray-500 block">seconds</span>
       </div>
     </div>
   );
@@ -88,7 +88,7 @@ export default function FunnelPage() {
           <div className="text-center mb-6">
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
               30-DAY MONEY BACK GUARANTEE FOR<br />
-              <span className="underline decoration-red-500 decoration-2 underline-offset-4">FEBRUARY ONLY!</span>
+              <span className="underline decoration-black decoration-2 underline-offset-4">FEBRUARY ONLY!</span>
             </h1>
           </div>
 
@@ -101,7 +101,7 @@ export default function FunnelPage() {
           {/* Progress Bar */}
           <div className="mb-8">
             <div className="relative h-10 bg-gray-200 rounded-full overflow-hidden max-w-lg mx-auto">
-              <div className="absolute inset-y-0 left-0 w-1/2 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-full flex items-center pl-4">
+              <div className="absolute inset-y-0 left-0 w-1/2 bg-gradient-to-r from-red-500 to-red-600 rounded-full flex items-center pl-4">
                 <span className="text-white text-sm font-medium">Step 1 of 2...</span>
               </div>
             </div>
@@ -117,20 +117,20 @@ export default function FunnelPage() {
             Please DO NOT book a call unless you are an active moving company.
           </p>
 
-          {/* Terms Notice */}
-          <p className="text-center text-gray-400 text-sm mb-8">
-            By scheduling, you agree to the <a href="#" className="text-blue-500 hover:underline">Terms of Service</a> and <a href="#" className="text-blue-500 hover:underline">Privacy Policy</a>. 
-            I understand I&apos;ll receive text reminders with instructions for my appointment.
-          </p>
-
           {/* Calendly Embed */}
-          <div className="border border-gray-200 rounded-lg overflow-hidden shadow-sm mb-12">
+          <div className="border border-gray-200 rounded-lg overflow-hidden shadow-sm">
             <div 
               className="calendly-inline-widget" 
               data-url="https://calendly.com/movescout-info/30min?hide_gdpr_banner=1"
-              style={{ minWidth: '320px', height: '700px' }}
+              style={{ minWidth: '320px', height: '950px' }}
             />
           </div>
+
+          {/* Terms Notice */}
+          <p className="text-center text-gray-500 text-sm mt-6 mb-12">
+            By scheduling, you agree to the <a href="#" className="text-blue-500 hover:underline">Terms of Service</a> and <a href="#" className="text-blue-500 hover:underline">Privacy Policy</a>.<br />
+            I understand I&apos;ll receive text reminders with instructions for my appointment.
+          </p>
 
           {/* Bottom CTA Section */}
           <div className="py-12 text-center border-t border-gray-100">
