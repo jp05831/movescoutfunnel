@@ -121,8 +121,8 @@ export default function FunnelPage() {
           <div className="border border-gray-200 rounded-lg shadow-sm" style={{ overflow: 'hidden' }}>
             <div 
               className="calendly-inline-widget" 
-              data-url="https://calendly.com/movescout-info/30min?hide_gdpr_banner=1"
-              style={{ minWidth: '320px', height: '700px', overflow: 'hidden' }}
+              data-url="https://calendly.com/movescout-info/30min?hide_gdpr_banner=1&hide_event_type_details=1"
+              style={{ minWidth: '320px', height: '1100px', overflow: 'hidden' }}
             />
           </div>
 
