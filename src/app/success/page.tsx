@@ -109,14 +109,14 @@ export default function SuccessPage() {
               <p className="text-sm text-gray-600 mt-2">Reply &quot;YES&quot; to confirm</p>
             </div>
             
-            {/* Email Example - Second, Bigger */}
-            <div className="text-center w-full">
+            {/* Email Example - Second, Bigger - breaks out of container */}
+            <div className="text-center -mx-4 md:-mx-20 lg:-mx-40">
               <p className="font-bold text-gray-900 mb-4">📧 Calendar Invite Email</p>
-              <div className="border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+              <div className="overflow-hidden">
                 <img 
                   src="/email-example.png" 
                   alt="Example calendar invite email" 
-                  className="w-full h-auto"
+                  className="w-full h-auto max-w-5xl mx-auto"
                 />
               </div>
               <p className="text-sm text-gray-600 mt-2">Click &quot;Yes&quot; to confirm your attendance</p>
