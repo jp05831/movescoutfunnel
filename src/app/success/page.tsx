@@ -84,10 +84,45 @@ export default function SuccessPage() {
         </div>
 
         {/* Reminder */}
-        <p className="text-center text-gray-600 italic">
+        <p className="text-center text-gray-600 italic mb-12">
           Remember: You&apos;re protected by our <span className="font-bold text-red-500">30-day money back guarantee</span>. 
           If we don&apos;t deliver results, you get a full refund.
         </p>
+
+        {/* What You'll Receive */}
+        <div className="border-t border-gray-200 pt-12">
+          <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+            Here&apos;s What You&apos;ll Receive:
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Email Example */}
+            <div className="text-center">
+              <p className="font-bold text-gray-900 mb-4">📧 Calendar Invite Email</p>
+              <div className="border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+                <img 
+                  src="/email-example.png" 
+                  alt="Example calendar invite email" 
+                  className="w-full h-auto"
+                />
+              </div>
+              <p className="text-sm text-gray-600 mt-2">Click &quot;Yes&quot; to confirm your attendance</p>
+            </div>
+            
+            {/* Text Example */}
+            <div className="text-center">
+              <p className="font-bold text-gray-900 mb-4">📱 Text Confirmation</p>
+              <div className="border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+                <img 
+                  src="/text-example.png" 
+                  alt="Example text message confirmation" 
+                  className="w-full h-auto"
+                />
+              </div>
+              <p className="text-sm text-gray-600 mt-2">Reply &quot;YES&quot; to confirm</p>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Footer */}
