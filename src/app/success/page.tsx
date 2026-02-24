@@ -95,22 +95,9 @@ export default function SuccessPage() {
             Here&apos;s What You&apos;ll Receive:
           </h2>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Email Example */}
-            <div className="text-center">
-              <p className="font-bold text-gray-900 mb-4">📧 Calendar Invite Email</p>
-              <div className="border border-gray-200 rounded-lg overflow-hidden shadow-sm">
-                <img 
-                  src="/email-example.png" 
-                  alt="Example calendar invite email" 
-                  className="w-full h-auto"
-                />
-              </div>
-              <p className="text-sm text-gray-600 mt-2">Click &quot;Yes&quot; to confirm your attendance</p>
-            </div>
-            
-            {/* Text Example */}
-            <div className="text-center">
+          <div className="flex flex-col gap-10">
+            {/* Text Example - First */}
+            <div className="text-center max-w-sm mx-auto">
               <p className="font-bold text-gray-900 mb-4">📱 Text Confirmation</p>
               <div className="border border-gray-200 rounded-lg overflow-hidden shadow-sm">
                 <img 
@@ -120,6 +107,19 @@ export default function SuccessPage() {
                 />
               </div>
               <p className="text-sm text-gray-600 mt-2">Reply &quot;YES&quot; to confirm</p>
+            </div>
+            
+            {/* Email Example - Second, Bigger */}
+            <div className="text-center max-w-2xl mx-auto">
+              <p className="font-bold text-gray-900 mb-4">📧 Calendar Invite Email</p>
+              <div className="border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+                <img 
+                  src="/email-example.png" 
+                  alt="Example calendar invite email" 
+                  className="w-full h-auto"
+                />
+              </div>
+              <p className="text-sm text-gray-600 mt-2">Click &quot;Yes&quot; to confirm your attendance</p>
             </div>
           </div>
         </div>
