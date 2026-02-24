@@ -76,8 +76,8 @@ export default function FunnelPage() {
               <span className="text-blue-600">Move</span><span className="text-gray-900">Scout</span>
             </span>
             <span className="text-gray-300">|</span>
-            <span className="text-sm text-gray-500 tracking-wide">
-              <span className="font-semibold">DIGITAL MARKETING</span> FOR MOVING COMPANIES
+            <span className="text-sm text-gray-900 tracking-wide">
+              <span className="font-bold">DIGITAL MARKETING</span> FOR MOVING COMPANIES
             </span>
           </div>
         </header>
@@ -86,22 +86,22 @@ export default function FunnelPage() {
         <div className="max-w-3xl mx-auto px-4 py-10">
           {/* Main Headline */}
           <div className="text-center mb-6">
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
               30-DAY MONEY BACK GUARANTEE FOR<br />
               <span className="underline decoration-black decoration-2 underline-offset-4">FEBRUARY ONLY!</span>
             </h1>
           </div>
 
           {/* Subheadline */}
-          <p className="text-center text-gray-600 mb-8 max-w-xl mx-auto">
+          <p className="text-center text-lg text-gray-900 mb-8 max-w-xl mx-auto">
             If MoveScout doesn&apos;t generate qualified moving leads within your first 30 days, 
             you&apos;ll receive a <span className="font-semibold underline">FULL REFUND</span> of our service fee.
           </p>
 
           {/* Progress Bar */}
           <div className="mb-8">
-            <div className="relative h-10 bg-gray-200 rounded-full overflow-hidden max-w-lg mx-auto">
-              <div className="absolute inset-y-0 left-0 w-1/2 bg-gradient-to-r from-red-500 to-red-600 rounded-full flex items-center pl-4">
+            <div className="relative h-10 bg-gray-200 overflow-hidden max-w-lg mx-auto">
+              <div className="absolute inset-y-0 left-0 w-1/2 bg-gradient-to-r from-red-500 to-red-600 flex items-center pl-4">
                 <span className="text-white text-sm font-medium">Step 1 of 2...</span>
               </div>
             </div>
@@ -113,16 +113,16 @@ export default function FunnelPage() {
           </div>
 
           {/* Warning Text */}
-          <p className="text-center text-red-500 italic font-medium mb-8">
+          <p className="text-center text-red-500 italic font-bold mb-8">
             Please DO NOT book a call unless you are an active moving company.
           </p>
 
           {/* Calendly Embed */}
-          <div className="border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+          <div className="border border-gray-200 rounded-lg shadow-sm" style={{ overflow: 'hidden' }}>
             <div 
               className="calendly-inline-widget" 
               data-url="https://calendly.com/movescout-info/30min?hide_gdpr_banner=1"
-              style={{ minWidth: '320px', height: '950px' }}
+              style={{ minWidth: '320px', height: '700px', overflow: 'hidden' }}
             />
           </div>
 
@@ -134,13 +134,13 @@ export default function FunnelPage() {
 
           {/* Bottom CTA Section */}
           <div className="py-12 text-center border-t border-gray-100">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Let&apos;s Walk You Through the System<br />
               That Changes Everything.
             </h2>
             <a 
               href="#top"
-              className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold px-8 py-3 rounded-full transition-colors"
+              className="inline-block bg-red-500 hover:bg-red-600 text-white font-bold px-8 py-4 transition-colors"
             >
               BOOK A FREE CALL NOW!
             </a>
@@ -155,8 +155,8 @@ export default function FunnelPage() {
                 <span className="text-blue-600">Move</span><span className="text-gray-900">Scout</span>
               </span>
               <span className="text-gray-300">|</span>
-              <span className="text-xs text-gray-500">
-                <span className="font-semibold">DIGITAL MARKETING</span> FOR MOVING COMPANIES
+              <span className="text-xs text-gray-900">
+                <span className="font-bold">DIGITAL MARKETING</span> FOR MOVING COMPANIES
               </span>
             </div>
             
