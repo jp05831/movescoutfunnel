@@ -110,7 +110,7 @@ export default function SuccessPage() {
             </div>
             
             {/* Email Example - Second, Bigger */}
-            <div className="text-center max-w-4xl mx-auto">
+            <div className="text-center w-full">
               <p className="font-bold text-gray-900 mb-4">📧 Calendar Invite Email</p>
               <div className="border border-gray-200 rounded-lg overflow-hidden shadow-sm">
                 <img 
