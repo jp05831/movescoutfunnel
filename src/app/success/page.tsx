@@ -4,9 +4,9 @@ import { useEffect } from 'react';
 
 export default function SuccessPage() {
   useEffect(() => {
-    // Fire Meta Pixel conversion event
+    // Fire Meta Pixel Lead event
     if (typeof window !== 'undefined' && (window as any).fbq) {
-      (window as any).fbq('track', 'Schedule');
+      (window as any).fbq('track', 'Lead');
     }
   }, []);
 
