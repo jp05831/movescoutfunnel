@@ -61,6 +61,19 @@ export default function FunnelPage() {
     return target;
   });
 
+  // Listen for Calendly booking event and redirect to success page
+  useEffect(() => {
+    const handleCalendlyEvent = (e: MessageEvent) => {
+      if (e.data.event && e.data.event === 'calendly.event_scheduled') {
+        // Redirect to success page after booking
+        window.location.href = '/success';
+      }
+    };
+
+    window.addEventListener('message', handleCalendlyEvent);
+    return () => window.removeEventListener('message', handleCalendlyEvent);
+  }, []);
+
   return (
     <>
       <Script 
