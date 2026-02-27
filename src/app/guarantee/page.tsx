@@ -3,8 +3,12 @@
 import { useEffect, useState } from 'react';
 import Script from 'next/script';
 
+// End of February 2026 - 11:59:59 PM EST
+const TARGET_DATE = new Date('2026-02-28T23:59:59-05:00');
+
 // Countdown Timer Component
-function CountdownTimer({ targetDate }: { targetDate: Date }) {
+function CountdownTimer() {
+  const [mounted, setMounted] = useState(false);
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -13,16 +17,22 @@ function CountdownTimer({ targetDate }: { targetDate: Date }) {
   });
 
   useEffect(() => {
+    setMounted(true);
+    
     const calculateTimeLeft = () => {
-      const difference = targetDate.getTime() - new Date().getTime();
+      const now = new Date().getTime();
+      const target = TARGET_DATE.getTime();
+      const difference = target - now;
       
       if (difference > 0) {
         setTimeLeft({
           days: Math.floor(difference / (1000 * 60 * 60 * 24)),
           hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-          minutes: Math.floor((difference / 1000 / 60) % 60),
+          minutes: Math.floor((difference / (1000 * 60)) % 60),
           seconds: Math.floor((difference / 1000) % 60)
         });
+      } else {
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
       }
     };
 
@@ -30,7 +40,31 @@ function CountdownTimer({ targetDate }: { targetDate: Date }) {
     const timer = setInterval(calculateTimeLeft, 1000);
 
     return () => clearInterval(timer);
-  }, [targetDate]);
+  }, []);
+
+  // Show placeholder until client-side JS runs
+  if (!mounted) {
+    return (
+      <div className="flex items-center justify-center gap-6 md:gap-8">
+        <div className="text-center">
+          <span className="text-3xl md:text-4xl font-bold text-red-600 tabular-nums">--</span>
+          <span className="text-sm text-gray-500 block">days</span>
+        </div>
+        <div className="text-center">
+          <span className="text-3xl md:text-4xl font-bold text-red-600 tabular-nums">--</span>
+          <span className="text-sm text-gray-500 block">hours</span>
+        </div>
+        <div className="text-center">
+          <span className="text-3xl md:text-4xl font-bold text-red-600 tabular-nums">--</span>
+          <span className="text-sm text-gray-500 block">minutes</span>
+        </div>
+        <div className="text-center">
+          <span className="text-3xl md:text-4xl font-bold text-red-600 tabular-nums">--</span>
+          <span className="text-sm text-gray-500 block">seconds</span>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="flex items-center justify-center gap-6 md:gap-8">
@@ -55,12 +89,6 @@ function CountdownTimer({ targetDate }: { targetDate: Date }) {
 }
 
 export default function FunnelPage() {
-  const [targetDate] = useState(() => {
-    const now = new Date();
-    const target = new Date(now.getTime() + (5 * 24 * 60 * 60 * 1000) + (3 * 60 * 60 * 1000));
-    return target;
-  });
-
   // Listen for Calendly booking event and redirect to success page
   useEffect(() => {
     const handleCalendlyEvent = (e: MessageEvent) => {
@@ -122,7 +150,7 @@ export default function FunnelPage() {
 
           {/* Countdown Timer */}
           <div className="mb-8">
-            <CountdownTimer targetDate={targetDate} />
+            <CountdownTimer />
           </div>
 
           {/* Warning Text */}
