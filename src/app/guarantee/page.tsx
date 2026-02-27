@@ -169,7 +169,7 @@ export default function FunnelPage() {
 
           {/* Terms Notice */}
           <p className="text-center text-gray-500 text-sm mt-6 mb-12">
-            By scheduling, you agree to the <a href="#" className="text-blue-500 hover:underline">Terms of Service</a> and <a href="#" className="text-blue-500 hover:underline">Privacy Policy</a>.<br />
+            By scheduling, you agree to the <a href="/terms" className="text-blue-500 hover:underline">Terms of Service</a> and <a href="/privacy" className="text-blue-500 hover:underline">Privacy Policy</a>.<br />
             I understand I&apos;ll receive text reminders with instructions for my appointment.
           </p>
 
@@ -206,9 +206,9 @@ export default function FunnelPage() {
                 Copyright 2025 MoveScout.co - All Rights Reserved.
               </p>
               <div className="flex items-center justify-center md:justify-end gap-3 text-xs text-gray-400 mt-1">
-                <a href="#" className="text-blue-500 hover:underline">Privacy Policy</a>
+                <a href="/privacy" className="text-blue-500 hover:underline">Privacy Policy</a>
                 <span>|</span>
-                <a href="#" className="text-blue-500 hover:underline">Terms of Service</a>
+                <a href="/terms" className="text-blue-500 hover:underline">Terms of Service</a>
               </div>
             </div>
           </div>

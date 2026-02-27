@@ -143,9 +143,9 @@ export default function SuccessPage() {
               Copyright 2025 MoveScout.co - All Rights Reserved.
             </p>
             <div className="flex items-center justify-center md:justify-end gap-3 text-xs text-gray-400 mt-1">
-              <a href="#" className="text-blue-500 hover:underline">Privacy Policy</a>
+              <a href="/privacy" className="text-blue-500 hover:underline">Privacy Policy</a>
               <span>|</span>
-              <a href="#" className="text-blue-500 hover:underline">Terms of Service</a>
+              <a href="/terms" className="text-blue-500 hover:underline">Terms of Service</a>
             </div>
           </div>
         </div>
