@@ -3,8 +3,8 @@
 import { useEffect, useState } from 'react';
 import Script from 'next/script';
 
-// End of February 2026 - 11:59:59 PM EST
-const TARGET_DATE = new Date('2026-02-28T23:59:59-05:00');
+// End of March 2026 - 11:59:59 PM EST
+const TARGET_DATE = new Date('2026-03-31T23:59:59-05:00');
 
 // Countdown Timer Component
 function CountdownTimer() {
@@ -129,7 +129,7 @@ export default function FunnelPage() {
           <div className="text-center mb-6">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
               30-DAY MONEY BACK GUARANTEE FOR<br />
-              <span className="underline decoration-black decoration-2 underline-offset-4">FEBRUARY ONLY!</span>
+              <span className="underline decoration-black decoration-2 underline-offset-4">MARCH ONLY!</span>
             </h1>
           </div>
 
